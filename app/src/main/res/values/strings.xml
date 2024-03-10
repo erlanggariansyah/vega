@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Vega</string>
+    <string name="vega_logo">Vega Logo</string>
+    <string name="home_banner_text">Halo Nasabah, silahkan login untuk\nmenikmati seluruh fasilitas Vega</string>
+    <string name="home_banner_line">Home Banner Line</string>
+    <string name="wave">Wave</string>
+    <string name="login_vector">Login Vector</string>
+    <string name="login_description">Daftar dengan nomor polis atau scan QR. Login dengan username dan password anda.</string>
+    <string name="login_title">Masuk</string>
+</resources>
