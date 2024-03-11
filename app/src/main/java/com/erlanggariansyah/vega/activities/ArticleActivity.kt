@@ -1,7 +1,9 @@
 package com.erlanggariansyah.vega.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erlanggariansyah.vega.R
@@ -10,10 +12,13 @@ import com.erlanggariansyah.vega.dto.Articles
 
 class ArticleActivity : AppCompatActivity() {
     private lateinit var articles: RecyclerView
+    private lateinit var back: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_article)
+
+        back = findViewById(R.id.article_back)
 
         articles = findViewById(R.id.articles)
 
@@ -30,5 +35,13 @@ class ArticleActivity : AppCompatActivity() {
 
         articles.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         articles.adapter = articlesAdapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        back.setOnClickListener {
+            startActivity(Intent(this@ArticleActivity, HomeActivity::class.java))
+        }
     }
 }
