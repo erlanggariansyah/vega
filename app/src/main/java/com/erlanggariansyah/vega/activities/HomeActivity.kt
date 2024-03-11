@@ -1,7 +1,9 @@
 package com.erlanggariansyah.vega.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erlanggariansyah.vega.R
@@ -11,9 +13,13 @@ import com.erlanggariansyah.vega.dto.Articles
 import com.erlanggariansyah.vega.dto.News
 
 class HomeActivity : AppCompatActivity() {
+    private lateinit var login: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        login = findViewById(R.id.login)
 
         val news: RecyclerView = findViewById(R.id.news)
         val articles: RecyclerView = findViewById(R.id.articles)
@@ -41,5 +47,14 @@ class HomeActivity : AppCompatActivity() {
 
         articles.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         articles.adapter = ArticleAdapter(articlesData)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        login.setOnClickListener {
+            val loginIntent = Intent(this@HomeActivity, LoginActivity::class.java)
+            startActivity(loginIntent)
+        }
     }
 }

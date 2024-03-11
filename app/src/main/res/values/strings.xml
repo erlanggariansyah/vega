@@ -14,4 +14,16 @@
     <string name="articles">Artikel</string>
     <string name="articles_home_view_all">Lihat semua artikel</string>
     <string name="article_thumbnail">Article Thumbnail</string>
+    <string name="home">Home</string>
+    <string name="unitlink">Unitlink</string>
+    <string name="hospital">Hospital</string>
+    <string name="profile">Profile</string>
+    <string name="vega">Vega</string>
+    <string name="back">Back</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="register_question">Belum memiliki akun Vega?</string>
+    <string name="register">Daftar</string>
+    <string name="vega_description">VEGA - Versatile Electronic Global Assistant</string>
+    <string name="vega_copyright">Copyright © 2024 PT MSIG Life Insurance Indonesia\nTbk All Rights Reserved.</string>
 </resources>

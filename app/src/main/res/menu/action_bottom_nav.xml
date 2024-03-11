@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="@string/home"
+        />
+    <item android:id="@+id/action_unitlink"
+        android:icon="@drawable/baseline_bar_chart_24"
+        android:title="@string/unitlink"
+        />
+    <item android:id="@+id/action_vega"
+        android:title="@string/vega"
+        android:icon="@drawable/baseline_vega"/>
+    <item android:id="@+id/action_hospital"
+        android:icon="@drawable/baseline_hospital_24"
+        android:title="@string/hospital"/>
+    <item android:id="@+id/action_profile"
+        android:icon="@drawable/baseline_company_24"
+        android:title="@string/profile"/>
+</menu>
