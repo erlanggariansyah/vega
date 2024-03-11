@@ -1,10 +1,16 @@
 package com.erlanggariansyah.vega.activities
 
+import android.content.ClipData.Item
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erlanggariansyah.vega.R
@@ -12,6 +18,8 @@ import com.erlanggariansyah.vega.adapters.home.ArticleAdapter
 import com.erlanggariansyah.vega.adapters.home.NewsAdapter
 import com.erlanggariansyah.vega.dto.Articles
 import com.erlanggariansyah.vega.dto.News
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationBarView
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var login: View
@@ -19,9 +27,13 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var articles: RecyclerView
     private lateinit var articlesViewAll: TextView
 
+    private lateinit var actionNavigation: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
+        actionNavigation = findViewById(R.id.home_action_navigation)
 
         articlesViewAll = findViewById(R.id.articles_view_all)
 
@@ -78,6 +90,24 @@ class HomeActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         })
+
+        actionNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.action_unitlink -> Toast.makeText(this, "Coming Soon", Toast.LENGTH_LONG).show()
+                R.id.action_vega -> {
+                    val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                    startActivity(intent)
+
+                    Toast.makeText(this, "VEGA E-Claim Policy with QR Scanner", Toast.LENGTH_LONG).show()
+                }
+                R.id.action_hospital -> Toast.makeText(this, "Coming Soon", Toast.LENGTH_LONG).show()
+                R.id.action_profile -> {
+                    startActivity(Intent(this@HomeActivity, ProfileActivity::class.java))
+                }
+            }
+
+            true
+        }
     }
 
     override fun onResume() {
