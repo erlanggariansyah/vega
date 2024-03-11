@@ -10,6 +10,16 @@ import com.erlanggariansyah.vega.R
 import com.erlanggariansyah.vega.dto.News
 
 class NewsAdapter(private val news: ArrayList<News>): RecyclerView.Adapter<NewsAdapter.ListViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data: News)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     class ListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.news_item_title)
         val subtitle: TextView = itemView.findViewById(R.id.news_item_subtitle)
@@ -25,5 +35,7 @@ class NewsAdapter(private val news: ArrayList<News>): RecyclerView.Adapter<NewsA
         holder.title.text = title
         holder.subtitle.text = subtitle
         holder.thumbnail.setImageResource(image)
+
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(news[holder.adapterPosition]) }
     }
 }

@@ -39,19 +39,6 @@
         <item>Bangkit Academy membawa konsep pendidikan yang holistik dengan mengintegrasikan magang dan pembelajaran berbasis proyek. Program magang yang diselenggarakan oleh Bangkit Academy bukan hanya tentang mendapatkan pengalaman kerja, tetapi juga tentang menerapkan pengetahuan yang diperoleh selama proses pembelajaran dalam situasi nyata. Peserta magang memiliki kesempatan untuk terlibat dalam proyek-proyek industri yang sesuai dengan minat dan keahlian mereka, sambil mendapatkan bimbingan langsung dari para ahli di bidangnya.\n\nSementara itu, Bangkit Academy juga aktif dalam mendukung Program Merdeka Belajar Kampus Merdeka (MBKM), inisiatif pemerintah untuk meningkatkan akses pendidikan tinggi di Indonesia. Melalui MBKM, Bangkit Academy menyediakan pelatihan tingkat lanjut dalam teknologi kepada mahasiswa dari berbagai perguruan tinggi di seluruh negeri, membantu mereka mempersiapkan diri untuk memasuki dunia kerja yang semakin terhubung secara digital. Dengan demikian, Bangkit Academy bukan hanya sekadar lembaga pendidikan, tetapi juga menjadi penghubung antara pendidikan dan dunia industri, membawa manfaat besar bagi pertumbuhan dan pengembangan sumber daya manusia Indonesia.</item>
     </string-array>
 
-    <integer-array name="images">
-        <item>@drawable/article_1</item>
-        <item>@drawable/article_2</item>
-        <item>@drawable/article_3</item>
-        <item>@drawable/article_4</item>
-        <item>@drawable/article_5</item>
-        <item>@drawable/article_6</item>
-        <item>@drawable/article_7</item>
-        <item>@drawable/article_8</item>
-        <item>@drawable/article_9</item>
-        <item>@drawable/article_10</item>
-    </integer-array>
-
     <string-array name="created_dates">
         <item>Rab, 17 Aug 2020 09:34</item>
         <item>Sel, 22 May 2021 21:59</item>

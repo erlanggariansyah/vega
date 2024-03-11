@@ -7,7 +7,7 @@
     <string name="login_vector">Login Vector</string>
     <string name="login_description">Daftar dengan nomor polis dan scan QR atau Login dengan username dan password anda.</string>
     <string name="login_title">Masuk</string>
-    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque dolor lectus, ut mollis velit faucibus a. Cras fringilla dignissim rutrum. Praesent eget mi purus. Proin erat dui, congue a dolor vitae, pellentesque tincidunt mi. Sed maximus, enim vitae volutpat rutrum, ipsum arcu tincidunt felis, auctor consequat lorem odio id odio. Suspendisse vel nisl pulvinar, eleifend risus eget, fermentum ipsum. Etiam interdum a nisi sit amet porta. Aenean mollis mauris ut turpis finibus, sit amet vulputate enim fermentum. Cras suscipit sapien vitae quam ultricies, a imperdiet mauris venenatis. Aenean vel lacus sodales, cursus odio ut, finibus velit. Maecenas ultricies ligula in odio rutrum ullamcorper. Phasellus vitae sodales leo, ut tempor augue. Sed imperdiet urna turpis, eu iaculis nibh vestibulum ac. Proin sed nisl convallis, laoreet nisi non, posuere nisl. Morbi sed felis nec sem ornare placerat. Suspendisse ex neque, mattis sit amet augue a, sodales bibendum nibh.</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pellentesque dolor lectus, ut mollis velit faucibus a.</string>
     <string name="news_item_title_placeholder">Halo Bangkit Academy</string>
     <string name="thumbnail">Thumbnail</string>
     <string name="news">Berita</string>
@@ -37,4 +37,5 @@
     <string name="policy_no">Nomor Polis</string>
     <string name="participant_code">Kode Partisipan</string>
     <string name="member_no">Nomor Peserta</string>
+    <string name="article">Artikel</string>
 </resources>
