@@ -26,4 +26,15 @@
     <string name="register">Daftar</string>
     <string name="vega_description">VEGA - Versatile Electronic Global Assistant</string>
     <string name="vega_copyright">Copyright © 2024 PT MSIG Life Insurance Indonesia\nTbk All Rights Reserved.</string>
+    <string name="dplk">DPLK</string>
+    <string name="qr">QR</string>
+    <string name="individual">Individual</string>
+    <string name="corporate">Corporate</string>
+    <string name="register_description">Silahkan pilih jenis pendaftaran</string>
+    <string name="register_individual_identity_no">NIK atau Nomor Polis</string>
+    <string name="birth_date">Tanggal Lahir</string>
+    <string name="login_question">Sudah memiliki akun Vega?</string>
+    <string name="policy_no">Nomor Polis</string>
+    <string name="participant_code">Kode Partisipan</string>
+    <string name="member_no">Nomor Peserta</string>
 </resources>
