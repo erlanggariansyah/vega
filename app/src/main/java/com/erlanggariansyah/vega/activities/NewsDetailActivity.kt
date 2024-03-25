@@ -4,31 +4,17 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import com.erlanggariansyah.vega.R
+import com.erlanggariansyah.vega.databinding.ActivityNewsDetailBinding
 import com.erlanggariansyah.vega.dto.News
 
 class NewsDetailActivity : AppCompatActivity() {
-    private lateinit var title: TextView
-    private lateinit var createdDate: TextView
-    private lateinit var image: ImageView
-    private lateinit var subtitle: TextView
-    private lateinit var description: TextView
-
-    private lateinit var back: ImageView
+    private lateinit var binding: ActivityNewsDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_news_detail)
 
-        title = findViewById(R.id.news_detail_title)
-        createdDate = findViewById(R.id.news_detail_created_date)
-        image = findViewById(R.id.news_detail_image)
-        subtitle = findViewById(R.id.news_detail_subtitle)
-        description = findViewById(R.id.news_detail_description)
-
-        back = findViewById(R.id.news_detail_back)
+        binding = ActivityNewsDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val news = if (Build.VERSION.SDK_INT >= 33) {
             intent.getParcelableExtra("news", News::class.java)
@@ -38,11 +24,11 @@ class NewsDetailActivity : AppCompatActivity() {
         }
 
         if (news != null) {
-            title.text = news.title
-            createdDate.text = news.createdDate
-            image.setImageResource(news.image)
-            subtitle.text = news.subtitle
-            description.text = news.description
+            binding.newsDetailTitle.text = news.title
+            binding.newsDetailCreatedDate.text = news.createdDate
+            binding.newsDetailImage.setImageResource(news.image)
+            binding.newsDetailSubtitle.text = news.subtitle
+            binding.newsDetailDescription.text = news.description
         } else {
             val intent = Intent(this@NewsDetailActivity, HomeActivity::class.java)
             startActivity(intent)
@@ -53,7 +39,7 @@ class NewsDetailActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        back.setOnClickListener {
+        binding.newsDetailBack.setOnClickListener {
             val intent = Intent(this@NewsDetailActivity, HomeActivity::class.java)
             startActivity(intent)
             finish()
